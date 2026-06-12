@@ -23,18 +23,42 @@ npm install -g .
 semantica11y <target> [options]
 ```
 
-Examples:
-
-```bash
-semantica11y https://example.com
-semantica11y ./index.html --format json
-semantica11y ./index.html --output report.txt
-```
+`<target>` can be:
+- a remote URL such as `https://example.com`
+- a local HTML file path such as `./index.html`
 
 ### Options
 
-- `-f, --format <format>` — `text` or `json` (default: `text`)
-- `-o, --output <file>` — Write the report to a file
+- `-f, --format <format>` — Choose the output format.
+  - `text` (default): human-readable console report.
+  - `json`: structured JSON output suitable for programmatic parsing.
+- `-o, --output <file>` — Save the report to the given file path instead of printing it to the terminal.
+
+### Examples
+
+- Run the audit against a remote website and print a readable text report:
+
+  ```bash
+  semantica11y https://example.com
+  ```
+
+  Output: A formatted list of detected issues in the terminal, including selectors, descriptions, and help links.
+
+- Run the audit on a local HTML file and output JSON:
+
+  ```bash
+  semantica11y ./index.html --format json
+  ```
+
+  Output: A JSON document printed to stdout containing the audit result object.
+
+- Run the audit on a local HTML file and write the report to a file:
+
+  ```bash
+  semantica11y ./index.html --output report.txt
+  ```
+
+  Output: The report is saved to `report.txt`, and the terminal prints a confirmation message.
 
 ## Features
 
