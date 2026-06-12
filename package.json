@@ -1,0 +1,22 @@
+{
+  "name": "semantica11y-cli",
+  "version": "0.1.0",
+  "description": "CLI for Semantica11y accessibility rules engine",
+  "bin": {
+    "semantica11y": "dist/index.js"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "semantica11y": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^20.0.0"
+  }
+}
