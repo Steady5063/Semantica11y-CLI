@@ -3,6 +3,7 @@
 import { Command } from 'commander';
 import { promises as fs } from 'fs';
 import path from 'path';
+import process from 'process';
 import { Analyzer, formatConsoleReport, type AnalysisResult } from 'semantica11y';
 
 const analyzer = new Analyzer();
